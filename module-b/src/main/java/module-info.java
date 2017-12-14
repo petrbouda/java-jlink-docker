@@ -1,0 +1,5 @@
+module moduleb {
+
+    requires modulea;
+
+}
