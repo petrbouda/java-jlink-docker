@@ -14,10 +14,9 @@ RUN set -ex && \
 
 WORKDIR /app
 
-COPY module-a/target/module-a-1.0-SNAPSHOT.jar .
-COPY module-b/target/module-b-1.0-SNAPSHOT.jar .
+COPY maven .
 
-RUN jlink --module-path module-a-1.0-SNAPSHOT.jar:module-b-1.0-SNAPSHOT.jar:$JAVA_HOME/jmods \
+RUN jlink --module-path modules/module-a-1.0-SNAPSHOT.jar:modules/module-b-1.0-SNAPSHOT.jar:$JAVA_HOME/jmods \
         --add-modules moduleb \
         --launcher run=moduleb/pbouda.Printer \
         --output dist \

@@ -18,6 +18,7 @@
     <modules>
         <module>module-a</module>
         <module>module-b</module>
+        <module>module-docker</module>
     </modules>
 
     <build>
