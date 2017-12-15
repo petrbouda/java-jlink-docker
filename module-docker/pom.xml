@@ -10,7 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>module-docker</artifactId>
-    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <docker-maven-plugin.version>0.23.0</docker-maven-plugin.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -18,7 +21,6 @@
             <artifactId>module-a</artifactId>
             <version>${project.version}</version>
         </dependency>
-
 
         <dependency>
             <groupId>pbouda-sandbox</groupId>
@@ -32,7 +34,7 @@
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.23.0</version>
+                <version>${docker-maven-plugin.version}</version>
                 <configuration>
                     <images>
                         <image>
