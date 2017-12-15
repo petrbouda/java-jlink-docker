@@ -16,7 +16,7 @@ WORKDIR /app
 
 COPY maven .
 
-RUN jlink --module-path modules/module-a-1.0-SNAPSHOT.jar:modules/module-b-1.0-SNAPSHOT.jar:$JAVA_HOME/jmods \
+RUN jlink --module-path modules/:$JAVA_HOME/jmods \
         --add-modules moduleb \
         --launcher run=moduleb/pbouda.Printer \
         --output dist \
