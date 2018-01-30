@@ -1,16 +1,4 @@
-FROM alpine AS builder
-
-ENV JAVA_HOME=/opt/jdk \
-    PATH=${PATH}:/opt/jdk/bin \
-    LANG=C.UTF-8
-
-RUN set -ex && \
-    apk add --no-cache bash && \
-    wget http://download.java.net/java/jdk9-alpine/archive/181/binaries/jdk-9-ea+181_linux-x64-musl_bin.tar.gz -O jdk.tar.gz && \
-    mkdir -p /opt/jdk && \
-    tar zxvf jdk.tar.gz -C /opt/jdk --strip-components=1 && \
-    rm jdk.tar.gz && \
-    rm /opt/jdk/lib/src.zip
+FROM openjdk:9 AS builder
 
 WORKDIR /app
 
