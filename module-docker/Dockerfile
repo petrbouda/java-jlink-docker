@@ -1,4 +1,4 @@
-FROM openjdk:9 AS builder
+FROM anapsix/alpine-java:9_jdk AS builder
 
 WORKDIR /app
 
