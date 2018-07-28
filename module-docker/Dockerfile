@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:9_jdk AS builder
+FROM openjdk:10-jdk AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN jlink --module-path modules/:$JAVA_HOME/jmods \
         --no-header-files \
         --no-man-pages
 
-FROM alpine
+FROM openjdk:10-jre
 
 WORKDIR /app
 

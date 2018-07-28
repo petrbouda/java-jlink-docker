@@ -12,7 +12,7 @@
     <artifactId>module-docker</artifactId>
 
     <properties>
-        <docker-maven-plugin.version>0.23.0</docker-maven-plugin.version>
+        <docker-maven-plugin.version>0.26.1</docker-maven-plugin.version>
     </properties>
 
     <dependencies>
