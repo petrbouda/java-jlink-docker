@@ -24,4 +24,4 @@ Inspect docker container (Linux-based):
 docker run -it --entrypoint /bin/bash modules-test
 ```
 
-
+https://medium.com/azulsystems/using-jlink-to-build-java-runtimes-for-non-modular-applications-9568c5e70ef4
